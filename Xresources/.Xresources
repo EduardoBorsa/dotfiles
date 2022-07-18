@@ -1,0 +1,15 @@
+Xcursor*theme:         Vanilla-DMZ-AA
+
+#define DPI 96
+
+Xft.dpi:       DPI
+Xft.antialias: 1
+Xft.rgba:      rgb
+Xft.hinting:   0
+Xft.hintstyle: hintnone
+Xft.lcdfilter: lcddefault
+
+#include "/home/dado/.config/Xresources/uxterm"
+#include "/home/dado/.config/Xresources/base16/current"
+
+alsamixer*scrollBar:   false

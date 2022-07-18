@@ -1,0 +1,95 @@
+# vim: set syntax=config
+
+[user]
+  name = Eduardo Borsa
+  email = borsa.dado@gmail.com
+[alias]
+  ls = log --color --graph --pretty=format:'%C(yellow)%d%Creset %Cgreen(%cr)%Creset %C(bold blue)[%an]%Creset %s %Cred(%h)%Creset' --abbrev-commit
+  sl = log --oneline --decorate
+  asm = !git add -A && git commit -sm
+  cleanAll = clean -df
+  untrack = rm -r --cached
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate --numstat
+  t = !tig "$@"
+  conf = diff --name-only --diff-filter=U
+  br   = branch
+  ba   = branch -a
+  br   = checkout -b
+  pb   = publish
+  ps   = push -u
+  pr   = pull-request
+  ppr  = push-pr
+  cpr  = close-pr
+  opr  = open-pr
+  pb   = publish
+  f    = fetch
+  c    = commit --verbose
+  d    = diff
+  dc   = diff --cached
+  co   = checkout
+  s    = status -sb
+  b    = browse
+  rb   = rebase
+  rbc  = rebase --continue
+  up   = update
+  a    = assign
+  lc   = log ORIG_HEAD.. --stat --no-merges
+  new  = !sh -c 'git log $1@{1}..$1@{0} "$@"'
+  wdiff = diff --word-diff
+  who = shortlog -sn
+  wip = commit -m 'WIP [ci skip]'
+  rev = commit -m 'code review'
+  la = !git config -l | grep alias | cut -c 7-
+  pulls = browse -- pulls
+  rv = browse -- 'pulls?q=is:pr is:open -review:approved -author:naps62'
+  issues = browse -- issues
+  projects = browse -- projects
+  proj = browse -- projects
+  web = browse
+  update = !git fetch && git rebase
+  home = rev-parse --show-toplevel
+  mine = !git branch -a --color | grep mp/
+[core]
+  editor = nvim
+  pager = diff-so-fancy | less --tabs=4 -RFX
+  # hooksPath = /home/naps62/.config/git/hooks/
+[color]
+  ui = true
+[push]
+  default = upstream
+[web]
+  browser = google-chrome
+[interactive]
+  singlekey = true
+[commit]
+  template = ~/.config/git/commit-message
+; [diff]
+;   tool = vimdiff
+; [merge]
+;   tool = vimdiff
+;   conflictstyle = diff3
+; [mergetool "vimdiff"]
+;   cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c "$wincmd w" -c "wincmd J"
+
+; [color "diff-highlight"]
+;   oldNormal = red bold
+;   oldHighlight = red bold 52
+;   newNormal = green bold
+;   newHighlight = green bold 22
+[credential]
+  helper = cache
+[gui]
+	fontui = -family \"Fira Code\" -size 16 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family \"Fira Code\" -size 14 -weight normal -slant roman -underline 0 -overstrike 0
+# diff formatters
+[diff "image"]
+  textconv = mediainfo
+[diff "text"]
+  textconv = fold -s -w80
+[secrets]
+	providers = git secrets --aws-provider
+	patterns = (\"|')?(AWS|aws|Aws)?_?(SECRET|secret|Secret)?_?(ACCESS|access|Access)?_?(KEY|key|Key)(\"|')?\\s*(:|=>|=)\\s*(\"|')?[A-Za-z0-9/\\+=]{40}(\"|')?
+	patterns = (\"|')?(AWS|aws|Aws)?_?(ACCOUNT|account|Account)_?(ID|id|Id)?(\"|')?\\s*(:|=>|=)\\s*(\"|')?[0-9]{4}\\-?[0-9]{4}\\-?[0-9]{4}(\"|')?
+	patterns = [0-9]+.[0-9]+
+[init]
+	defaultBranch = main

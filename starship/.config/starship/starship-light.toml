@@ -1,0 +1,5 @@
+[directory]
+style = 'blue bold'
+
+[time]
+style = 'bold red'
