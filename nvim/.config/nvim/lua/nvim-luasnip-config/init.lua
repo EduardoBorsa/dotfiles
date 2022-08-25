@@ -33,6 +33,8 @@ ls.add_snippets("elixir", elixir_snippets)
 ls.add_snippets("rust", rust_snippets)
 ls.add_snippets("solidity", solidity_snippets)
 ls.add_snippets("javascript", javascript_snippets)
+ls.add_snippets("typescriptreact", javascript_snippets)
+ls.add_snippets("typescript", javascript_snippets)
 
 require("luasnip.loaders.from_vscode").lazy_load()
 

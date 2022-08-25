@@ -40,7 +40,23 @@ local M = {
     }};
     export default {};
   ]], {i(1), i(0), same(1)})),
-	s("cslog", fmt([[console.log({})]], {i(0)}))
+	s("cslog", fmt([[console.log({})]], {i(0)})),
+	s("pre", fmt([[<pre>{{JSON.stringify({}, null, 2)}}</pre>]], {i(0)})),
+	s("it", fmt([[
+        it("{}", async function () {{
+          {}
+        }})
+      ]], {i(1), i(0)})),
+	s("describe", fmt([[
+        describe("{}", function () {{
+          {}
+        }});
+      ]], {i(1), i(0)}))
 }
 
 return M
+
+-- s("it", fmt([[
+--    it({}, async function () {{
+--    }});
+--  ]]), {i(0)})

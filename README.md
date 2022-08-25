@@ -60,6 +60,10 @@ Oh My Zsh is an open source, community-driven framework for managing your Zsh co
 ### rofi
 
 [rofi](https://github.com/davatorium/rofi)
+
+TODO: Still can't use emogis inside terminal. Check how to use rofimoji.
+Read the README.md from rofi:
+
 Replace for d_menu for i3
 
 ### arandr
