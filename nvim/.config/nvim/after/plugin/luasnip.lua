@@ -20,13 +20,13 @@ local types = require("luasnip.util.types")
 local conds = require("luasnip.extras.expand_conditions")
 
 local function copy(args)
-  return args[1]
+	return args[1]
 end
 
 local same = function(index)
-  return f(function(arg)
-    return arg[1]
-  end, { index })
+	return f(function(arg)
+		return arg[1]
+	end, {index})
 end
 ls.add_snippets("all", {})
 

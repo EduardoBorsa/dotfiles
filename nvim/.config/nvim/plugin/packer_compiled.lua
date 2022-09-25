@@ -235,11 +235,6 @@ _G.packer_plugins = {
     path = "/home/dado/.local/share/nvim/site/pack/packer/start/vim-closetag",
     url = "https://github.com/alvan/vim-closetag"
   },
-  ["vim-elixir"] = {
-    loaded = true,
-    path = "/home/dado/.local/share/nvim/site/pack/packer/start/vim-elixir",
-    url = "https://github.com/elixir-editors/vim-elixir"
-  },
   ["vim-projectionist"] = {
     loaded = true,
     path = "/home/dado/.local/share/nvim/site/pack/packer/start/vim-projectionist",

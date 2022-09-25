@@ -45,4 +45,7 @@ vim.g.tokyonight_sidebars = {"qf", "vista_kind", "terminal", "packer"}
 vim.g.tokyonight_colors = {hint = "#FFA500", error = "#ff0000"}
 
 -- Load the colorscheme
-vim.cmd [[colorscheme tokyonight]]
+vim.cmd [[
+colorscheme tokyonight
+set noswapfile
+]]

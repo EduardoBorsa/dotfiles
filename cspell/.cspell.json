@@ -24,7 +24,9 @@
     "adoc",
     "yomi",
     "cslog",
-    "noreply"
+    "noreply",
+    "DYEB",
+    "postcss"
   ],
   "flagWords": ["hte"]
 }
