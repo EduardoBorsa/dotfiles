@@ -14,4 +14,4 @@ vim.g.vim_jsx_pretty_colorful_config = 1
 vim.g.user_emmet_mode = 'inv'
 vim.g.user_emmet_settings = user_emmet_settings_dict
 
-vim.g.user_emmet_leader_key = '<C-E>'
+-- vim.g.user_emmet_leader_key = '<C-E>'

@@ -1,0 +1,5 @@
+bin/.local/bin/gigalixir
+bin/.local/bin/normalizer
+bin/.local/bin/pygmentize
+bin/.local/bin/qr
+bin/.local/bin/rollbar

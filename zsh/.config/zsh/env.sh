@@ -17,6 +17,7 @@ env_dir PATH $HOME/.go/bin
 env_dir PATH ~/programs/lua-language-server/bin
 
 export PATH=$PATH:~/programs/lua-language-server/bin
+export PATH=$PATH:~/programs/chromedriver
 
 # OSX STUFF
 [[ $(uname -s) == "Darwin" ]] && export IS_MAC_OS=1

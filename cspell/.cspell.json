@@ -26,7 +26,8 @@
     "cslog",
     "noreply",
     "DYEB",
-    "postcss"
+    "postcss",
+    "nums"
   ],
   "flagWords": ["hte"]
 }

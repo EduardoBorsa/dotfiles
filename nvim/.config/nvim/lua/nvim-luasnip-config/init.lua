@@ -1,6 +1,7 @@
 -- if vim.g.snippets ~= "luasnip" or not pcall(require, "luasnip") then return end
 local rust_snippets = require('nvim-luasnip-config/snips/rust')
 local elixir_snippets = require('nvim-luasnip-config/snips/elixir')
+local eelixir_snippets = require('nvim-luasnip-config/snips/eelixir')
 local generic_snippets = require('nvim-luasnip-config/snips/all')
 local solidity_snippets = require('nvim-luasnip-config/snips/solidity')
 local javascript_snippets = require('nvim-luasnip-config/snips/javascript')
@@ -30,6 +31,7 @@ ls.config.set_config {
 
 ls.add_snippets("all", generic_snippets)
 ls.add_snippets("elixir", elixir_snippets)
+ls.add_snippets("eelixir", eelixir_snippets)
 ls.add_snippets("rust", rust_snippets)
 ls.add_snippets("solidity", solidity_snippets)
 ls.add_snippets("javascript", javascript_snippets)

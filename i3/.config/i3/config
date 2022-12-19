@@ -230,7 +230,8 @@ assign [class="Google-chrome"] 7
 assign [class="Postman"] 6
 assign [class="Brave-browser"] 7
 
-for_window [class="Pavucontrol"] floating enable
+for_window [class="Pavucontrol"] floating enable, resize set 800 600, move position center
+for_window [class="spectacle"] floating enable, resize set 800 600, move position top
 for_window [class="Thunar"] floating enable, resize set 800 600, move position center
 for_window [class="Nautilus"] floating enable, resize set 1280 1000, move position center
 for_window [class="feh"] floating enable

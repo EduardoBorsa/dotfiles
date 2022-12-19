@@ -26,5 +26,6 @@ vim.cmd [[
   endif
 
   so ~/.config/nvim/vim-lang/mappings.vim
+  so ~/.config/nvim/vim-lang/configs.vim
   so ~/.config/nvim/vim-lang/plugin_configs/init.vim
 ]]

@@ -23,3 +23,6 @@ bindkey -s '^R' "~/.bin/fzf-history-call.sh\n"
 # bindkey -s '\eb' '^u/path/to/script.sh^M'
 
 eval "$(starship init zsh)"
+
+export FLYCTL_INSTALL="/home/dado/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"

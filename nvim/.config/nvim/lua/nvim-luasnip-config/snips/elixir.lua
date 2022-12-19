@@ -68,7 +68,56 @@ local M = {
         {}
         {{:noreply, state}}
       end
-		]], {i(0)}))
+		]], {i(0)})),
+	s("mount", fmt([[
+      @impl true
+      def mount(_assigns, _session, socket) do
+        {}
+        {{:ok, socket}}
+      end
+		]], {i(0)})),
+	s("on_mount", fmt([[
+      @impl true
+      def on_mount(_scope, _params_, _session, socket) do
+        {}
+        {{:cont, socket}}
+      end
+		]], {i(0)})),
+	s("render", fmt([[
+      @impl true
+      def render(assigns) do
+        ~H"""
+        {}
+        """
+      end
+		]], {i(0)})),
+	s("handle_event", fmt([[
+      @impl true
+      def handle_event("{}", _unsigned_params, socket) do
+        {}
+        {{:noreply, socket}}
+      end
+    ]], {i(1), i(0)})),
+	s("update", fmt([[
+      @impl true
+      def update(assigns, socket) do
+        {}
+        {{:ok, socket}}
+      end
+    ]], {i(0)})),
+	s("handle_params", fmt([[
+      @impl true
+      def handle_params(unsigned_params, uri, socket) do
+        {}
+        {{:noreply, socket}}
+      end
+    ]], {i(0)})),
+	s("on_mount", fmt([[
+      def on_mount(_scope, _params, _session, socket) do
+        {}
+        {{:cont, socket}}
+      end
+    ]], {i(0)}))
 
 }
 

@@ -72,7 +72,7 @@ return require('packer').startup(function()
 
   use { "alexghergh/nvim-tmux-navigation" }
 
-  -- use {"elixir-editors/vim-elixir"}
+  use { "elixir-editors/vim-elixir" }
 
   use { "janko-m/vim-test" }
 
