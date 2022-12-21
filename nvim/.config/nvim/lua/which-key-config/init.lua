@@ -76,6 +76,7 @@ local opts = {
 	nowait = false -- use `nowait` when creating keymaps
 }
 local mappings = {
+	b = {":Telescope buffers<cr>", "[b]uffers"},
 	c = {
 		'<cmd>lua require("core.utils").close_buffer()<CR>',
 		"Close Current Buffer"
@@ -107,8 +108,6 @@ local mappings = {
 		N = {'<cmd>lua vim.diagnostic.goto_prev()<CR>', "Go To Previous Diagnostic"}
 	},
 	["ptf"] = {"<Plug>PlenaryTestFile", "Run Plenary Test file"},
-	bpc = {":BufferLinePickClose<cr>", "Buffer Line Pick Close"},
-	q = {":q<cr>", "Quit"},
 	sf = {":Telescope find_files<cr>", "Search Files"},
 	t = {
 		name = "Test",

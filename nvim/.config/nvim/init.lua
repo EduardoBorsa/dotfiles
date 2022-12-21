@@ -1,8 +1,6 @@
 require('plugins')
 require('treesitter-config')
 require('lualine-config')
-require('bufferline-config')
-require('nvim-tree-config')
 require('nvim-comment')
 require('which-key-config')
 require('telescope-config')

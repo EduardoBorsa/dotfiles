@@ -80,7 +80,23 @@ null_ls.setup({
 		formatting.dart_format,
 		null_ls.builtins.diagnostics.eslint,
 		null_ls.builtins.code_actions.eslint,
-		null_ls.builtins.formatting.prettier,
+		null_ls.builtins.formatting.prettier.with({
+			filetypes = {
+				"javascript",
+				"javascriptreact",
+				"typescript",
+				"typescriptreact",
+				"css",
+				"scss",
+				"less",
+				"html",
+				"json",
+				"yaml",
+				"markdown",
+				"markdown.mdx"
+			},
+			args = {"--pretty", "false", "--noEmit"}
+		}),
 		null_ls.builtins.diagnostics.cspell,
 		formatting.mix.with({args = {"format", "$FILENAME", "-"}}),
 		formatting.lua_format.with({

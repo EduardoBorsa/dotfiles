@@ -1,103 +1,92 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
-  use { 'wbthomason/packer.nvim' }
+	use {'wbthomason/packer.nvim'}
 
-  use { 'folke/tokyonight.nvim' }
+	use {'folke/tokyonight.nvim'}
 
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
+	use {
+		'nvim-lualine/lualine.nvim',
+		requires = {'kyazdani42/nvim-web-devicons', opt = true}
+	}
 
-  use {
-    'akinsho/bufferline.nvim',
-    tag = "v2.*",
-    requires = 'kyazdani42/nvim-web-devicons'
-  }
+	-- use {"terrortylor/nvim-comment"}
+	use {
+		'numToStr/Comment.nvim',
+		config = function()
+			require('Comment').setup()
+		end
+	}
 
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = {
-      'kyazdani42/nvim-web-devicons' -- optional, for file icon
-    }
-  }
+	use {'JoosepAlviste/nvim-ts-context-commentstring'}
 
-  -- use {"terrortylor/nvim-comment"}
-  use {
-    'numToStr/Comment.nvim',
-    config = function()
-      require('Comment').setup()
-    end
-  }
+	use {"folke/which-key.nvim"}
 
-  use { 'JoosepAlviste/nvim-ts-context-commentstring' }
+	use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/plenary.nvim'}}}
 
-  use { "folke/which-key.nvim" }
+	use {'neovim/nvim-lspconfig'}
 
-  use { 'nvim-telescope/telescope.nvim', requires = { { 'nvim-lua/plenary.nvim' } } }
+	use {'hrsh7th/cmp-nvim-lsp'}
 
-  use { 'neovim/nvim-lspconfig' }
+	use {'hrsh7th/cmp-buffer'}
 
-  use { 'hrsh7th/cmp-nvim-lsp' }
+	use {'hrsh7th/cmp-path'}
 
-  use { 'hrsh7th/cmp-buffer' }
+	use {'hrsh7th/cmp-cmdline'}
 
-  use { 'hrsh7th/cmp-path' }
+	use {'hrsh7th/nvim-cmp'}
 
-  use { 'hrsh7th/cmp-cmdline' }
+	-- For luasnip users.
+	use {'L3MON4D3/LuaSnip'}
 
-  use { 'hrsh7th/nvim-cmp' }
+	use {"rafamadriz/friendly-snippets"}
 
-  -- For luasnip users.
-  use { 'L3MON4D3/LuaSnip' }
+	use {'saadparwaiz1/cmp_luasnip'}
 
-  use { "rafamadriz/friendly-snippets" }
+	use {'windwp/nvim-autopairs'}
 
-  use { 'saadparwaiz1/cmp_luasnip' }
+	use {'onsails/lspkind.nvim'}
 
-  use { 'windwp/nvim-autopairs' }
+	use {'folke/lua-dev.nvim'}
 
-  use { 'onsails/lspkind.nvim' }
+	use {'lewis6991/gitsigns.nvim'}
 
-  use { 'folke/lua-dev.nvim' }
+	use {"lukas-reineke/indent-blankline.nvim"}
 
-  use { 'lewis6991/gitsigns.nvim' }
+	use {"jose-elias-alvarez/null-ls.nvim"}
 
-  use { "lukas-reineke/indent-blankline.nvim" }
+	use {"alexghergh/nvim-tmux-navigation"}
 
-  use { "jose-elias-alvarez/null-ls.nvim" }
+	use {"elixir-editors/vim-elixir"}
 
-  use { "alexghergh/nvim-tmux-navigation" }
+	use {"janko-m/vim-test"}
 
-  use { "elixir-editors/vim-elixir" }
+	use {'simrat39/rust-tools.nvim'}
 
-  use { "janko-m/vim-test" }
+	-- Debugging Rust
+	use {'nvim-lua/plenary.nvim'}
+	use {'mfussenegger/nvim-dap'}
 
-  use { 'simrat39/rust-tools.nvim' }
+	use {'tpope/vim-projectionist'}
+	-- use {'~/projects/lua/plugins/stack_map_nvim_tutorial.nvim'}
 
-  -- Debugging Rust
-  use { 'nvim-lua/plenary.nvim' }
-  use { 'mfussenegger/nvim-dap' }
+	-- Lua docs stuff
+	use {'nanotee/luv-vimdocs'}
+	use {'milisims/nvim-luaref'}
 
-  use { 'tpope/vim-projectionist' }
-  -- use {'~/projects/lua/plugins/stack_map_nvim_tutorial.nvim'}
+	use {'tpope/vim-vinegar'}
 
-  -- Lua docs stuff
-  use { 'nanotee/luv-vimdocs' }
-  use { 'milisims/nvim-luaref' }
+	use {'mg979/vim-visual-multi'}
 
-  use { 'tpope/vim-vinegar' }
+	use {'alvan/vim-closetag'}
 
-  use { 'mg979/vim-visual-multi' }
+	use {'mattn/emmet-vim'}
 
-  use { 'alvan/vim-closetag' }
+	use {'tpope/vim-surround'}
+	use {'tpope/vim-repeat'}
 
-  use { 'mattn/emmet-vim' }
-
-  use { 'tpope/vim-surround' }
-  use { 'tpope/vim-repeat' }
+	use({'ThePrimeagen/harpoon'})
 
 end)
