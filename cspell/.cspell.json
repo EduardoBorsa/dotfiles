@@ -3,6 +3,7 @@
   "language": "en",
   "words": [
     "mkdirp",
+    "ueberauth",
     "datasource",
     "cuid",
     "tsmerge",
